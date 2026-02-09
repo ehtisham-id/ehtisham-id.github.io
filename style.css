@@ -49,6 +49,13 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+/* Ensure all links are clickable */
+a {
+    position: relative;
+    z-index: 10;
+    cursor: pointer;
+}
+
 /* Background Animation */
 .bg-animation {
     position: fixed;
@@ -58,6 +65,7 @@ body {
     height: 100%;
     z-index: -1;
     overflow: hidden;
+    pointer-events: none;
 }
 
 .animated-bg {
@@ -68,6 +76,7 @@ body {
         radial-gradient(circle at 20% 30%, rgba(0, 212, 255, 0.08) 0%, transparent 50%),
         radial-gradient(circle at 80% 70%, rgba(124, 58, 237, 0.08) 0%, transparent 50%);
     animation: bgShift 20s ease-in-out infinite;
+    pointer-events: none;
 }
 
 @keyframes bgShift {
@@ -85,12 +94,14 @@ body {
         linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
     background-size: 50px 50px;
     opacity: 0.5;
+    pointer-events: none;
 }
 
 #particleCanvas {
     position: absolute;
     width: 100%;
     height: 100%;
+    pointer-events: none;
 }
 
 /* Navigation */
@@ -152,6 +163,8 @@ nav.scrolled {
     border-radius: 8px;
     transition: all var(--transition-fast);
     position: relative;
+    z-index: 10;
+    cursor: pointer;
 }
 
 .nav-links a::before {
@@ -339,6 +352,8 @@ section {
     border: 2px solid transparent;
     cursor: pointer;
     font-size: 1rem;
+    position: relative;
+    z-index: 10;
 }
 
 .btn-primary {
@@ -708,6 +723,9 @@ section {
     color: var(--text-secondary);
     transition: all var(--transition-fast);
     flex-shrink: 0;
+    position: relative;
+    z-index: 10;
+    cursor: pointer;
 }
 
 .project-link:hover {
@@ -777,6 +795,9 @@ section {
     text-decoration: none;
     transition: all var(--transition-base);
     backdrop-filter: blur(10px);
+    position: relative;
+    z-index: 10;
+    cursor: pointer;
 }
 
 .contact-link:hover {
@@ -843,6 +864,9 @@ section {
     text-decoration: none;
     font-size: 0.9rem;
     transition: color var(--transition-fast);
+    position: relative;
+    z-index: 10;
+    cursor: pointer;
 }
 
 .footer-links a:hover {
