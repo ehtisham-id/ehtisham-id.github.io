@@ -145,6 +145,22 @@ if (navToggle) {
         navLinksContainer.classList.toggle('active');
         navToggle.classList.toggle('active');
     });
+    
+    // Close menu when clicking a link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinksContainer.classList.remove('active');
+            navToggle.classList.remove('active');
+        });
+    });
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!navToggle.contains(e.target) && !navLinksContainer.contains(e.target)) {
+            navLinksContainer.classList.remove('active');
+            navToggle.classList.remove('active');
+        }
+    });
 }
 
 // Project Category Expand/Collapse
