@@ -4,343 +4,594 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muhammad Ehtisham - Backend & Security Engineer</title>
+    <title>Muhammad Ehtisham - Backend & Web3 Security Engineer</title>
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <!-- Background -->
     <div class="bg-animation">
         <div class="animated-bg"></div>
-        <div class="floating-shape shape-1"></div>
-        <div class="floating-shape shape-2"></div>
-        <div class="floating-shape shape-3"></div>
-        <div class="floating-shape shape-4"></div>
+        <div class="grid-overlay"></div>
+        <canvas id="particleCanvas"></canvas>
     </div>
 
-    <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Tech Stack</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+    <!-- Navigation -->
+    <nav id="mainNav">
+        <div class="nav-content">
+            <div class="nav-logo">
+                <span class="logo-bracket">&lt;</span>
+                <span class="logo-text">ehtisham</span>
+                <span class="logo-bracket">/&gt;</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#tech">Stack</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
     </nav>
 
+    <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="container">
-            <h1>MUHAMMAD EHTISHAM</h1>
-            <p>Security-Driven Backend Engineer & Systems Architect</p>
-            <div class="hero-buttons">
-                <button class="btn-3d" onclick="window.location.href='#projects'">View Engineering Work</button>
-            </div>
-
-            <div class="cube-container">
-                <div class="cube">
-                    <div class="cube-face front">🛡️</div>
-                    <div class="cube-face back">⚙️</div>
-                    <div class="cube-face right">🔒</div>
-                    <div class="cube-face left">🐍</div>
-                    <div class="cube-face top">🦀</div>
-                    <div class="cube-face bottom">🚀</div>
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    <span>Available for Backend & Security Projects</span>
+                </div>
+                <h1 class="hero-title">
+                    <span class="title-line">Muhammad</span>
+                    <span class="title-line gradient-text">Ehtisham</span>
+                </h1>
+                <p class="hero-subtitle">Backend Engineer × Web3 Security Researcher</p>
+                <p class="hero-description">
+                    Building secure, scalable systems with <strong>TypeScript, Python, Rust & Solidity</strong>.
+                    Bridging software architecture and Web3 security auditing.
+                </p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">
+                        <span>Explore Projects</span>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <a href="https://github.com/ehtisham-id" target="_blank" class="btn btn-secondary">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                        <span>GitHub</span>
+                    </a>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section id="about">
-        <div class="container">
-            <div class="glass-card fade-in">
-                <h2 class="section-title">About Me</h2>
-                <p>I am a <strong>Security-Driven Backend Engineer</strong> operating at the intersection of
-                    high-performance architecture and offensive security. I prioritize making systems secure, scalable,
-                    and efficient by design.</p>
-                <br>
-                <p>My expertise bridges the gap between <strong>Software Engineering</strong> and <strong>Network
-                        Defense</strong>. Whether I'm architecting distributed systems in <strong>Python & Rust</strong>
-                    or conducting penetration tests using <strong>Burp Suite</strong>, my goal is to ensure every line
-                    of code is hardened against real-world threats.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="skills">
-        <div class="container">
-            <h2 class="section-title">Technical Arsenal</h2>
-
-            <div class="skill-category fade-in">
-                <h3 class="category-title">Programming Languages</h3>
-                <div class="skills-container">
-                    <div class="skill-item">
-                        <span class="skill-icon">📘</span>
-                        <h4>TypeScript</h4>
+            <div class="hero-visual">
+                <div class="terminal-window">
+                    <div class="terminal-header">
+                        <div class="terminal-buttons">
+                            <span class="btn-close"></span>
+                            <span class="btn-minimize"></span>
+                            <span class="btn-maximize"></span>
+                        </div>
+                        <div class="terminal-title">terminal</div>
                     </div>
-                    <div class="skill-item">
-                        <span class="skill-icon">🐍</span>
-                        <h4>Python</h4>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-icon">🦀</span>
-                        <h4>Rust</h4>
-                    </div>
-                </div>
-            </div>
-
-            <div class="skill-category fade-in">
-                <h3 class="category-title">Backend Stack</h3>
-                <div class="skills-container">
-                    <div class="skill-item">
-                        <span class="skill-icon">🟢</span>
-                        <h4>Node.js</h4>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-icon">🦁</span>
-                        <h4>NestJS</h4>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-icon">⚡</span>
-                        <h4>FastAPI</h4>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-icon">🚂</span>
-                        <h4>Express.js</h4>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-icon">🕸️</span>
-                        <h4>GraphQL</h4>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-icon">🐇</span>
-                        <h4>RabbitMQ</h4>
-                    </div>
-                </div>
-            </div>
-
-            <div class="skill-category fade-in">
-                <h3 class="category-title">Databases</h3>
-                <div class="skills-container">
-                    <div class="skill-item">
-                        <span class="skill-icon">🐘</span>
-                        <h4>PostgreSQL</h4>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-icon">🍃</span>
-                        <h4>MongoDB</h4>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-icon">🔴</span>
-                        <h4>Redis</h4>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-icon">🐬</span>
-                        <h4>MySQL</h4>
-                    </div>
-                </div>
-            </div>
-
-            <div class="skill-category fade-in">
-                <h3 class="category-title">Security & DevOps</h3>
-                <div class="skills-container">
-                    <div class="skill-item">
-                        <span class="skill-icon">🐳</span>
-                        <h4>Docker</h4>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-icon">☁️</span>
-                        <h4>AWS / Azure</h4>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-icon">🟧</span>
-                        <h4>Burp Suite</h4>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-icon">🦈</span>
-                        <h4>Wireshark</h4>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-icon">🐉</span>
-                        <h4>Kali Linux</h4>
+                    <div class="terminal-body">
+                        <div class="terminal-line">
+                            <span class="prompt">$</span>
+                            <span class="command">whoami</span>
+                        </div>
+                        <div class="terminal-output">ehtisham@backend-engineer</div>
+                        <div class="terminal-line">
+                            <span class="prompt">$</span>
+                            <span class="command">cat skills.txt</span>
+                        </div>
+                        <div class="terminal-output">
+                            <div>→ TypeScript/Node.js/NestJS</div>
+                            <div>→ Python/FastAPI/Django</div>
+                            <div>→ Rust (systems programming)</div>
+                            <div>→ Solidity/Web3.js/Ethers.js</div>
+                            <div>→ PostgreSQL/MongoDB/Redis</div>
+                            <div>→ Docker/AWS/Azure</div>
+                            <div>→ Web3 Security: Smart Contract Auditing</div>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="prompt">$</span>
+                            <span class="command typing-cursor"></span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="projects">
+    <!-- About Section -->
+    <section id="about" class="about">
         <div class="container">
-            <h2 class="section-title">Featured Engineering Projects</h2>
+            <div class="section-header">
+                <span class="section-label">// About Me</span>
+                <h2 class="section-title">Security-Driven Engineering</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I operate at the intersection of <strong>high-performance backend architecture</strong> and <strong>Web3 security</strong>. Every system I build is designed to be secure, scalable, and efficient from the ground up.</p>
+                    <p>My expertise bridges <strong>Software Engineering</strong> and <strong>Blockchain Security</strong>. Whether architecting distributed systems in Python & Rust or conducting smart contract audits with Solidity, my goal is ensuring every line of code is hardened against real-world threats and vulnerabilities.</p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">11+</div>
+                            <div class="stat-label">Production Projects</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">5+</div>
+                            <div class="stat-label">Tech Stacks</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">100%</div>
+                            <div class="stat-label">Security Focused</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            <div class="project-category fade-in">
+    <!-- Tech Stack Section -->
+    <section id="tech" class="tech-stack">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">// Technical Arsenal</span>
+                <h2 class="section-title">Technologies & Tools</h2>
+            </div>
+            <div class="tech-grid">
+                <div class="tech-category">
+                    <h3 class="tech-category-title">Languages</h3>
+                    <div class="tech-items">
+                        <div class="tech-item">
+                            <span class="tech-icon">TS</span>
+                            <span class="tech-name">TypeScript</span>
+                        </div>
+                        <div class="tech-item">
+                            <span class="tech-icon">Py</span>
+                            <span class="tech-name">Python</span>
+                        </div>
+                        <div class="tech-item">
+                            <span class="tech-icon">Rs</span>
+                            <span class="tech-name">Rust</span>
+                        </div>
+                        <div class="tech-item">
+                            <span class="tech-icon">Sol</span>
+                            <span class="tech-name">Solidity</span>
+                        </div>
+                        <div class="tech-item">
+                            <span class="tech-icon">C++</span>
+                            <span class="tech-name">C++</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="tech-category">
+                    <h3 class="tech-category-title">Backend</h3>
+                    <div class="tech-items">
+                        <div class="tech-item">
+                            <span class="tech-icon">Node</span>
+                            <span class="tech-name">Node.js</span>
+                        </div>
+                        <div class="tech-item">
+                            <span class="tech-icon">Nest</span>
+                            <span class="tech-name">NestJS</span>
+                        </div>
+                        <div class="tech-item">
+                            <span class="tech-icon">Fast</span>
+                            <span class="tech-name">FastAPI</span>
+                        </div>
+                        <div class="tech-item">
+                            <span class="tech-icon">Exp</span>
+                            <span class="tech-name">Express</span>
+                        </div>
+                        <div class="tech-item">
+                            <span class="tech-icon">GQL</span>
+                            <span class="tech-name">GraphQL</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="tech-category">
+                    <h3 class="tech-category-title">Databases</h3>
+                    <div class="tech-items">
+                        <div class="tech-item">
+                            <span class="tech-icon">PG</span>
+                            <span class="tech-name">PostgreSQL</span>
+                        </div>
+                        <div class="tech-item">
+                            <span class="tech-icon">Mg</span>
+                            <span class="tech-name">MongoDB</span>
+                        </div>
+                        <div class="tech-item">
+                            <span class="tech-icon">Rd</span>
+                            <span class="tech-name">Redis</span>
+                        </div>
+                        <div class="tech-item">
+                            <span class="tech-icon">My</span>
+                            <span class="tech-name">MySQL</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="tech-category">
+                    <h3 class="tech-category-title">Web3 & Security</h3>
+                    <div class="tech-items">
+                        <div class="tech-item">
+                            <span class="tech-icon">W3</span>
+                            <span class="tech-name">Web3.js</span>
+                        </div>
+                        <div class="tech-item">
+                            <span class="tech-icon">Eth</span>
+                            <span class="tech-name">Ethers.js</span>
+                        </div>
+                        <div class="tech-item">
+                            <span class="tech-icon">HH</span>
+                            <span class="tech-name">Hardhat</span>
+                        </div>
+                        <div class="tech-item">
+                            <span class="tech-icon">Slth</span>
+                            <span class="tech-name">Slither</span>
+                        </div>
+                        <div class="tech-item">
+                            <span class="tech-icon">Myth</span>
+                            <span class="tech-name">Mythril</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="tech-category">
+                    <h3 class="tech-category-title">DevOps & Infrastructure</h3>
+                    <div class="tech-items">
+                        <div class="tech-item">
+                            <span class="tech-icon">Dk</span>
+                            <span class="tech-name">Docker</span>
+                        </div>
+                        <div class="tech-item">
+                            <span class="tech-icon">AWS</span>
+                            <span class="tech-name">AWS</span>
+                        </div>
+                        <div class="tech-item">
+                            <span class="tech-icon">Az</span>
+                            <span class="tech-name">Azure</span>
+                        </div>
+                        <div class="tech-item">
+                            <span class="tech-icon">K8s</span>
+                            <span class="tech-name">Kubernetes</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">// Featured Work</span>
+                <h2 class="section-title">Engineering Projects</h2>
+            </div>
+
+            <!-- Backend Projects -->
+            <div class="project-category">
                 <div class="category-header">
-                    <h3 class="category-title">Backend & Systems Engineering</h3>
+                    <h3 class="category-title">
+                        <span class="category-icon">⚙️</span>
+                        Backend & Systems Engineering
+                    </h3>
                     <button class="expand-btn" data-target="backend-projects">
                         <span>View Projects</span>
-                        <span class="expand-icon">▼</span>
+                        <svg class="expand-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
                     </button>
                 </div>
                 <div class="projects-grid" id="backend-projects">
-                    <div class="glass-card project-card" data-project="cpp-backend">
-                        <div class="project-image" data-icon="⚙️"></div>
-                        <h4 class="project-title">C++ Backend & Unit Testing</h4>
-                        <p class="project-description">High-performance backend architecture focusing on memory
-                            management, automated build systems (Makefile), and rigorous Google Test integration.</p>
-                        <div class="tech-stack">
-                            <span class="tech-tag">C++</span>
-                            <span class="tech-tag">Google Test</span>
-                            <span class="tech-tag">System Design</span>
+                    <div class="project-card" data-project="proj11">
+                        <div class="project-number">01</div>
+                        <div class="project-header">
+                            <h4 class="project-title">Multiplayer Game Server</h4>
+                            <a href="https://github.com/ehtisham-id/proj11_multiplayer_game_server" target="_blank" class="project-link">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                        </div>
+                        <p class="project-description">Real-time multiplayer game server with WebSocket connections, state synchronization, and low-latency architecture.</p>
+                        <div class="project-tech">
+                            <span class="tech-badge">TypeScript</span>
+                            <span class="tech-badge">WebSockets</span>
+                            <span class="tech-badge">Node.js</span>
                         </div>
                     </div>
 
-                    <div class="glass-card project-card" data-project="network-sim">
-                        <div class="project-image" data-icon="🌐"></div>
-                        <h4 class="project-title">Enterprise Network Simulation</h4>
-                        <p class="project-description">Simulated enterprise IT infrastructure using Cisco Packet Tracer,
-                            designing multi-zone security architectures and centralized services.</p>
-                        <div class="tech-stack">
-                            <span class="tech-tag">Cisco</span>
-                            <span class="tech-tag">Network Security</span>
-                            <span class="tech-tag">Routing</span>
+                    <div class="project-card" data-project="proj10">
+                        <div class="project-number">02</div>
+                        <div class="project-header">
+                            <h4 class="project-title">Storage Service Platform</h4>
+                            <a href="https://github.com/ehtisham-id/proj10_storage_service_platform" target="_blank" class="project-link">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                        </div>
+                        <p class="project-description">Distributed file storage system with encryption, deduplication, and multi-region replication capabilities.</p>
+                        <div class="project-tech">
+                            <span class="tech-badge">TypeScript</span>
+                            <span class="tech-badge">S3</span>
+                            <span class="tech-badge">Encryption</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-project="proj9">
+                        <div class="project-number">03</div>
+                        <div class="project-header">
+                            <h4 class="project-title">Hosting Platform</h4>
+                            <a href="https://github.com/ehtisham-id/proj9_hosting_platform" target="_blank" class="project-link">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                        </div>
+                        <p class="project-description">Container orchestration platform for deploying and managing web applications with auto-scaling.</p>
+                        <div class="project-tech">
+                            <span class="tech-badge">Docker</span>
+                            <span class="tech-badge">Kubernetes</span>
+                            <span class="tech-badge">HTML</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-project="proj8">
+                        <div class="project-number">04</div>
+                        <div class="project-header">
+                            <h4 class="project-title">Video Streaming Platform</h4>
+                            <a href="https://github.com/ehtisham-id/proj8_video_streaming_platform" target="_blank" class="project-link">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                        </div>
+                        <p class="project-description">High-performance video streaming service with HLS/DASH protocols, CDN integration, and adaptive bitrate.</p>
+                        <div class="project-tech">
+                            <span class="tech-badge">TypeScript</span>
+                            <span class="tech-badge">FFmpeg</span>
+                            <span class="tech-badge">HLS</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-project="proj7">
+                        <div class="project-number">05</div>
+                        <div class="project-header">
+                            <h4 class="project-title">AI Platform API</h4>
+                            <a href="https://github.com/ehtisham-id/proj7_ai_platform_api" target="_blank" class="project-link">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                        </div>
+                        <p class="project-description">RESTful API for AI model inference with request queuing, rate limiting, and model versioning.</p>
+                        <div class="project-tech">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">FastAPI</span>
+                            <span class="tech-badge">ML</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-project="proj6">
+                        <div class="project-number">06</div>
+                        <div class="project-header">
+                            <h4 class="project-title">E-commerce API</h4>
+                            <a href="https://github.com/ehtisham-id/proj6_ecommerce_api" target="_blank" class="project-link">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                        </div>
+                        <p class="project-description">Scalable e-commerce backend with payment processing, inventory management, and order tracking.</p>
+                        <div class="project-tech">
+                            <span class="tech-badge">TypeScript</span>
+                            <span class="tech-badge">NestJS</span>
+                            <span class="tech-badge">PostgreSQL</span>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="project-category fade-in">
+            <!-- Full Stack Web Apps -->
+            <div class="project-category">
                 <div class="category-header">
-                    <h3 class="category-title">Full Stack Web Apps</h3>
+                    <h3 class="category-title">
+                        <span class="category-icon">🌐</span>
+                        Full Stack Web Applications
+                    </h3>
                     <button class="expand-btn" data-target="web-projects">
                         <span>View Projects</span>
-                        <span class="expand-icon">▼</span>
+                        <svg class="expand-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
                     </button>
                 </div>
                 <div class="projects-grid" id="web-projects">
-                    <div class="glass-card project-card" data-project="restaurant-mgmt">
-                        <div class="project-image" data-icon="🏪"></div>
-                        <h4 class="project-title">Restaurant Management System</h4>
-                        <p class="project-description">Scalable web application featuring inventory tracking, order
-                            processing, and complex relational database schema.</p>
-                        <div class="tech-stack">
-                            <span class="tech-tag">Express.js</span>
-                            <span class="tech-tag">MySQL</span>
-                            <span class="tech-tag">Sequelize</span>
+                    <div class="project-card" data-project="proj5">
+                        <div class="project-number">07</div>
+                        <div class="project-header">
+                            <h4 class="project-title">Voice Transcription API</h4>
+                            <a href="https://github.com/ehtisham-id/proj5_voice_transcription_api" target="_blank" class="project-link">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                        </div>
+                        <p class="project-description">Real-time speech-to-text API with multi-language support, speaker diarization, and timestamp generation.</p>
+                        <div class="project-tech">
+                            <span class="tech-badge">TypeScript</span>
+                            <span class="tech-badge">Whisper</span>
+                            <span class="tech-badge">WebRTC</span>
                         </div>
                     </div>
 
-                    <div class="glass-card project-card" data-project="job-board">
-                        <div class="project-image" data-icon="💼"></div>
-                        <h4 class="project-title">Job Board Platform</h4>
-                        <p class="project-description">Secure platform with role-based authentication, resume file
-                            handling, and admin dashboards.</p>
-                        <div class="tech-stack">
-                            <span class="tech-tag">Node.js</span>
-                            <span class="tech-tag">Auth</span>
-                            <span class="tech-tag">MongoDB</span>
+                    <div class="project-card" data-project="proj4">
+                        <div class="project-number">08</div>
+                        <div class="project-header">
+                            <h4 class="project-title">URL Shortener API</h4>
+                            <a href="https://github.com/ehtisham-id/proj4_url_shortener_api" target="_blank" class="project-link">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                        </div>
+                        <p class="project-description">URL shortening service with analytics, custom aliases, QR code generation, and click tracking.</p>
+                        <div class="project-tech">
+                            <span class="tech-badge">EJS</span>
+                            <span class="tech-badge">Express</span>
+                            <span class="tech-badge">MongoDB</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-project="proj3">
+                        <div class="project-number">09</div>
+                        <div class="project-header">
+                            <h4 class="project-title">Weather API Wrapper</h4>
+                            <a href="https://github.com/ehtisham-id/proj3_weather_api_wrapper_service" target="_blank" class="project-link">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                        </div>
+                        <p class="project-description">Unified weather API aggregating data from multiple providers with caching and rate limiting.</p>
+                        <div class="project-tech">
+                            <span class="tech-badge">JavaScript</span>
+                            <span class="tech-badge">Redis</span>
+                            <span class="tech-badge">REST</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-project="proj2">
+                        <div class="project-number">10</div>
+                        <div class="project-header">
+                            <h4 class="project-title">Todo List API</h4>
+                            <a href="https://github.com/ehtisham-id/proj_2_todo_list_api" target="_blank" class="project-link">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                        </div>
+                        <p class="project-description">RESTful task management API with user authentication, categories, priorities, and deadline tracking.</p>
+                        <div class="project-tech">
+                            <span class="tech-badge">EJS</span>
+                            <span class="tech-badge">Express</span>
+                            <span class="tech-badge">JWT</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-project="proj1">
+                        <div class="project-number">11</div>
+                        <div class="project-header">
+                            <h4 class="project-title">Personal Blogging Platform</h4>
+                            <a href="https://github.com/ehtisham-id/proj_1_personal_blogging_platform" target="_blank" class="project-link">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                        </div>
+                        <p class="project-description">Full-stack blogging platform with markdown support, comments, tags, and user profiles.</p>
+                        <div class="project-tech">
+                            <span class="tech-badge">EJS</span>
+                            <span class="tech-badge">Node.js</span>
+                            <span class="tech-badge">MongoDB</span>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <div class="project-category fade-in">
-                <div class="category-header">
-                    <h3 class="category-title">AI & Computer Vision</h3>
-                    <button class="expand-btn" data-target="ai-projects">
-                        <span>View Projects</span>
-                        <span class="expand-icon">▼</span>
-                    </button>
-                </div>
-                <div class="projects-grid" id="ai-projects">
-                    <div class="glass-card project-card" data-project="face-detection">
-                        <div class="project-image" data-icon="👤"></div>
-                        <h4 class="project-title">AI Face Detection App</h4>
-                        <p class="project-description">Real-time biometric analysis using computer vision algorithms and
-                            machine learning models.</p>
-                        <div class="tech-stack">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">OpenCV</span>
-                            <span class="tech-tag">ML</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-category fade-in">
-                <div class="category-header">
-                    <h3 class="category-title">System Programming (Games)</h3>
-                    <button class="expand-btn" data-target="game-projects">
-                        <span>View Projects</span>
-                        <span class="expand-icon">▼</span>
-                    </button>
-                </div>
-                <div class="projects-grid" id="game-projects">
-                    <div class="glass-card project-card" data-project="galaxian">
-                        <div class="project-image" data-icon="🚀"></div>
-                        <h4 class="project-title">Galaxian (C++ Engine)</h4>
-                        <p class="project-description">Demonstrating low-level logic and memory management through game
-                            development using C++ and SFML.</p>
-                        <div class="tech-stack">
-                            <span class="tech-tag">C++</span>
-                            <span class="tech-tag">SFML</span>
-                            <span class="tech-tag">OOP</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
         </div>
     </section>
 
-    <section id="contact">
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
         <div class="container">
-            <div class="glass-card fade-in">
-                <h2 class="section-title">Connect With Me</h2>
-                <div class="social-links">
-                    <a href="mailto:m.ehtisham.id@gmail.com" class="social-link" title="Gmail">
-                        <span class="social-icon">📧</span>
-                        <span>Gmail</span>
+            <div class="contact-content">
+                <div class="contact-text">
+                    <h2 class="section-title">Let's Build Something Secure</h2>
+                    <p>Open to backend engineering roles, Web3 security consulting, and collaborative projects. Reach out for system architecture discussions or smart contract auditing engagements.</p>
+                </div>
+                <div class="contact-links">
+                    <a href="mailto:m.ehtisham.id@gmail.com" class="contact-link">
+                        <div class="contact-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2"/>
+                                <path d="M22 6l-10 7L2 6" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <div class="contact-info">
+                            <div class="contact-label">Email</div>
+                            <div class="contact-value">m.ehtisham.id@gmail.com</div>
+                        </div>
                     </a>
-                    <a href="https://github.com/ehtisham-id" class="social-link" title="GitHub" target="_blank">
-                        <span class="social-icon">🐙</span>
-                        <span>GitHub</span>
+                    <a href="https://github.com/ehtisham-id" target="_blank" class="contact-link">
+                        <div class="contact-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                        </div>
+                        <div class="contact-info">
+                            <div class="contact-label">GitHub</div>
+                            <div class="contact-value">@ehtisham-id</div>
+                        </div>
                     </a>
-                    <a href="https://linkedin.com/in/ehtisham-id" class="social-link" title="LinkedIn" target="_blank">
-                        <span class="social-icon">💼</span>
-                        <span>LinkedIn</span>
+                    <a href="https://linkedin.com/in/ehtisham-id" target="_blank" class="contact-link">
+                        <div class="contact-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </div>
+                        <div class="contact-info">
+                            <div class="contact-label">LinkedIn</div>
+                            <div class="contact-value">ehtisham-id</div>
+                        </div>
                     </a>
-                    <a href="https://wa.me/923174285936" class="social-link" title="WhatsApp" target="_blank">
-                        <span class="social-icon">💬</span>
-                        <span>WhatsApp</span>
-                    </a>
-                    <a href="https://instagram.com/ehtisham.id" class="social-link" title="Instagram" target="_blank">
-                        <span class="social-icon">📷</span>
-                        <span>Instagram</span>
-                    </a>
-                    <a href="https://x.com/EhtishamId" class="social-link" title="X (Twitter)" target="_blank">
-                        <span class="social-icon">🐦</span>
-                        <span>X</span>
+                    <a href="https://wa.me/923174285936" target="_blank" class="contact-link">
+                        <div class="contact-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                            </svg>
+                        </div>
+                        <div class="contact-info">
+                            <div class="contact-label">WhatsApp</div>
+                            <div class="contact-value">+92 317 4285936</div>
+                        </div>
                     </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <div id="projectModal" class="modal">
-        <div class="modal-content">
-            <button class="modal-close">&times;</button>
-            <div class="modal-image" id="modalImage"></div>
-            <h2 class="modal-title" id="modalTitle">Project Title</h2>
-            <p class="modal-description" id="modalDescription">Project description will go here...</p>
-            <div class="modal-tech" id="modalTech"></div>
-            <div class="modal-links">
-                <a href="#" class="modal-link" id="modalLiveLink" target="_blank">Live Demo</a>
-                <a href="#" class="modal-link" id="modalGithubLink" target="_blank">GitHub</a>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2026 Muhammad Ehtisham. Built with security & Web3 in mind.</p>
+                <div class="footer-links">
+                    <a href="https://github.com/ehtisham-id" target="_blank">GitHub</a>
+                    <a href="https://linkedin.com/in/ehtisham-id" target="_blank">LinkedIn</a>
+                    <a href="https://instagram.com/ehtisham.id" target="_blank">Instagram</a>
+                </div>
             </div>
         </div>
-    </div>
-    <script src="./index.js"></script>
+    </footer>
+
+    <script src="index.js"></script>
 </body>
 
 </html>
